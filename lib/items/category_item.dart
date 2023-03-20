@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app_nav_and_screens/screens/catgegory_meals_screen.dart';
 
 class CategoryItem extends StatelessWidget {
   final String id;
@@ -13,12 +12,9 @@ class CategoryItem extends StatelessWidget {
     // savoir sur quel écran on se situe par exemple
     // MaterialPageRoute est utilisé en tant que Wrapper par exemple pour
     // gérer l'animation entre les pages
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (_) {
-          return CategoryMealsScreen(id, title);
-        },
-      ),
+    Navigator.of(context).pushNamed(
+      '/category-meals',
+      arguments: {'id': id, 'title': title},
     );
   }
 
