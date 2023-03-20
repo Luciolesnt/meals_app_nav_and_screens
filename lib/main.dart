@@ -33,9 +33,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink)
             .copyWith(secondary: Colors.amber),
       ),
-      home: const CategoriesScreen(),
+      initialRoute: '/',
       routes: {
-        '/category-meals': (context) => const CategoryMealsScreen(),
+        '/': (context) => const CategoriesScreen(),
+        CategoryMealsScreen.routeName: (context) => const CategoryMealsScreen(),
       },
     );
   }
