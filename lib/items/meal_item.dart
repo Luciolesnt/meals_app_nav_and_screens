@@ -46,7 +46,10 @@ class MealItem extends StatelessWidget {
   }
 
   void selectMeal(context) {
-    Navigator.of(context).pushNamed(MealDetailScreen.routeName, arguments: id);
+    // PushNAmed return a Futur Object so you can use then
+    Navigator.of(context)
+        .pushNamed(MealDetailScreen.routeName, arguments: id)
+        .then((result) => {print(result)});
   }
 
   @override
