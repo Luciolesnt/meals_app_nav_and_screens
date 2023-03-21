@@ -11,9 +11,6 @@ class CategoriesScreen extends StatelessWidget {
     // Le widget Scafold est indispensble pour wrapper notre screen
     //(permet de délimiter l'écran en pretant attention au format de la'appareil utilisé par l'uilisateur)
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('DeliMeal'),
-      ),
       body: GridView(
         padding: const EdgeInsets.all(25),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
